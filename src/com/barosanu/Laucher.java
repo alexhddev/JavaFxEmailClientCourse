@@ -1,6 +1,8 @@
 package com.barosanu;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -14,15 +16,10 @@ public class Laucher extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Button button = new Button("Click!");
-        button.setOnAction(e -> {
-            System.out.println("Button clicked!");
-        });
 
-        StackPane stackPane = new StackPane();
-        stackPane.getChildren().add(button);
+        Parent parent = FXMLLoader.load(getClass().getResource("view/first.fxml"));
 
-        Scene scene = new Scene(stackPane, 300, 250);
+        Scene scene = new Scene(parent, 300, 250);
         stage.setScene(scene);
 
         stage.show();
