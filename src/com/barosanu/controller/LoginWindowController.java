@@ -1,4 +1,4 @@
-package com.barosanu.view;
+package com.barosanu.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
