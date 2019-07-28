@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="701.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.barosanu.controller.MainWindowController">
+   <children>
+      <MenuBar layoutY="7.0" prefHeight="29.0" prefWidth="1053.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Open" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#optionsAction" text="Options" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TreeView fx:id="emailsTreeView" layoutY="36.0" prefHeight="663.0" prefWidth="246.0" />
+      <TableView fx:id="emailsTableView" layoutX="246.0" layoutY="36.0" prefHeight="225.0" prefWidth="809.0">
+        <columns>
+          <TableColumn prefWidth="84.0" text="Sender" />
+          <TableColumn prefWidth="208.0" text="Subject" />
+            <TableColumn prefWidth="235.0" text="Recipient" />
+            <TableColumn prefWidth="123.0" text="Size" />
+            <TableColumn prefWidth="140.0" text="Date" />
+        </columns>
+      </TableView>
+      <WebView fx:id="emailWebView" layoutX="246.0" layoutY="261.0" prefHeight="437.0" prefWidth="809.0" />
+   </children>
+</AnchorPane>
