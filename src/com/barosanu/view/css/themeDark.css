@@ -1,0 +1,8 @@
+*{
+    -fx-background-color: darkblue;
+    -fx-text-fill: white;
+}
+
+.big{
+   -fx-text-fill: #15568c;
+}
