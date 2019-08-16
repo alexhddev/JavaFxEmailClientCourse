@@ -5,12 +5,16 @@ import com.barosanu.controller.services.LoginService;
 import com.barosanu.model.EmailAccount;
 import com.barosanu.view.ViewFactory;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class LoginWindowController extends BaseController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class LoginWindowController extends BaseController implements Initializable {
 
     @FXML
     private Label errorLabel;
@@ -41,13 +45,17 @@ public class LoginWindowController extends BaseController {
                         Stage stage = (Stage) errorLabel.getScene().getWindow();
                         viewFactory.closeStage(stage);
                         return;
+                    case FAILED_BY_CREDENTIALS:
+                        errorLabel.setText("invalid credentials!");
+                        return;
+                    case FAILED_BY_UNEXPECTED_ERROR:
+                        errorLabel.setText("unexpected error!");
+                        return;
+                    default:
+                        return;
                 }
-
             });
-
         }
-
-
     }
 
     private boolean fieldsAreValid() {
@@ -59,8 +67,12 @@ public class LoginWindowController extends BaseController {
             errorLabel.setText("Please fill password");
             return false;
         }
-
         return true;
+    }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        emailAddressFied.setText("barosanu2489@gmail.com");
+        passwordField.setText("asdliwoeu2349Teuu!");
     }
 }
