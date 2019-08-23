@@ -59,6 +59,10 @@ public class MainWindowController extends BaseController implements Initializabl
     void addAccountAction() {
         viewFactory.showLoginWindow();
     }
+    @FXML
+    void composeMessageAction() {
+        viewFactory.showComposeMessageWindow();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
