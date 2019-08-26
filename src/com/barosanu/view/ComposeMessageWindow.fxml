@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.web.HTMLEditor?>
-
 
 <AnchorPane prefHeight="674.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -16,5 +16,7 @@
       <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="14.0" layoutY="138.0" prefHeight="486.0" prefWidth="667.0" />
       <Button layoutX="568.0" layoutY="628.0" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="32.0" prefWidth="110.0" text="Send" />
       <Label fx:id="errorLabel" layoutX="25.0" layoutY="636.0" prefHeight="16.0" prefWidth="287.0" />
+      <Label layoutX="14.0" layoutY="39.0" prefHeight="16.0" prefWidth="94.0" text="Account:" />
+      <ChoiceBox fx:id="emailAccountChoice" layoutX="88.0" layoutY="34.0" prefHeight="26.0" prefWidth="590.0" />
    </children>
 </AnchorPane>

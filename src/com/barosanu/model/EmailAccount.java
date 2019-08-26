@@ -26,6 +26,11 @@ public class EmailAccount {
         this.properties = properties;
     }
 
+    @Override
+    public String toString() {
+        return address;
+    }
+
     public Store getStore() {
         return store;
     }
