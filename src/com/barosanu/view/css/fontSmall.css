@@ -1,8 +1,50 @@
-*{
-   -fx-font-size: 10pt;
+/*Theme base font sizes:*/
+.errorText{
+    -fx-font-size: 9pt;
 }
 
 .big{
-   -fx-font-size: 12pt;
-   -fx-text-fill: #35568c;
+   -fx-font-size: 15pt;
+}
+Button, Label, ChoiceBox, Slider, TextField, .menu-button{
+    -fx-font-size: 9pt;
+}
+
+Slider .axis {
+    -fx-font-size: 9pt;
+}
+.text-field {
+    -fx-font-size: 9pt;
+}
+
+.text-field:focused {
+    -fx-font-size: 9pt;
+}
+/*Table view:*/
+.table-view .column-header-background .label{
+    -fx-font-size: 8pt;
+}
+.table-view .table-cell{
+    -fx-font-size: 8pt;
+}
+/*Tree view:*/
+.tree-cell{
+    -fx-font-size: 9pt;
+}
+
+/*menus and menu items:*/
+.menu-bar > .container > .menu-button > .label {
+    -fx-font-size: 9pt;
+}
+
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing > .label {
+    -fx-font-size: 9pt;
+}
+.menu-item .label {
+    -fx-font-size: 9pt;
+}
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-font-size: 9pt;
 }
