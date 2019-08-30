@@ -1,8 +1,23 @@
-.loginContainer, .mainContainer{
-    -fx-background-color: #3a4559;
+/*Theme base colors:*/
+* {
+    -fx-my-background-color-color: #3a4559;
+    -fx-my-background-color-color-alt: #616c87;
+    -fx-my-font-color: white;
+    -fx-my-font-color-highlighted: white;
+
+	-fx-my-default-element-color: #353b4a;
+	-fx-my-error-text-fill: #690f0f;
+}
+
+
+
+
+
+.container{
+    -fx-background-color: -fx-my-background-color-color;
 }
 .errorText{
-    -fx-text-fill: #690f0f;
+    -fx-text-fill: -fx-my-error-text-fill;
     -fx-font-weight: bold;
     -fx-font-size: 13pt;
 }
@@ -11,26 +26,26 @@
    -fx-font-size: 16pt;
 }
 Button, Label, ChoiceBox, Slider, TextField, .menu-button{
-    -fx-text-fill: white;
+    -fx-text-fill: -fx-my-font-color;
 }
 Button {
-    -fx-background-color: #353b4a;
+    -fx-background-color: -fx-my-default-element-color;
 }
 Button:hover {
-    -fx-background-color: #616c87;
+    -fx-background-color: -fx-my-background-color-color-alt;
 }
 ChoiceBox >* {
-    -fx-background-color: #353b4a;
+    -fx-background-color: -fx-my-default-element-color;
 }
 Slider .axis {
-    -fx-tick-label-fill: white;
+    -fx-tick-label-fill: -fx-my-font-color;
 }
 
 Slider .track{
-    -fx-background-color: #353b4a;
+    -fx-background-color: -fx-my-default-element-color;
 }
 Slider .track:hover{
-    -fx-background-color: #616c87;
+    -fx-background-color: -fx-my-background-color-color-alt;
 }
 Slider .thumb{
     -fx-background-color: #85939e;
@@ -53,11 +68,11 @@ Slider .thumb{
 }
 /*Table view:*/
 .table-view{
-   -fx-background-color: #3a4559;
+   -fx-background-color: -fx-my-background-color-color;
 }
 
 .table-view:focused{
-    -fx-background-color: #3a4559;
+    -fx-background-color: -fx-my-background-color-color;
 }
 .table-view .column-header-background,
 .table-view .column-header-background .filler {
@@ -66,7 +81,7 @@ Slider .thumb{
 
 .table-view .column-header-background .label{
     -fx-background-color: transparent;
-    -fx-text-fill: white;
+    -fx-text-fill: -fx-my-font-color;
 }
 
 .table-view .column-header {
@@ -74,7 +89,7 @@ Slider .thumb{
 }
 
 .table-view .table-cell{
-    -fx-text-fill: white;
+    -fx-text-fill: -fx-my-font-color;
 }
 
 .table-row-cell{
@@ -100,10 +115,10 @@ Slider .thumb{
 /*Tree view:*/
 .tree-cell{
     -fx-background-color: #3f4b61;
-    -fx-text-fill: white;
+    -fx-text-fill: -fx-my-font-color;
  }
 .tree-cell > .tree-disclosure-node > .arrow  {
-     -fx-background-color: white;
+     -fx-background-color: -fx-my-font-color;
  }
 .tree-cell:expanded > .tree-disclosure-node > .arrow {
      -fx-background-color: grey;
@@ -122,24 +137,16 @@ Slider .thumb{
 }
 
 /*menus and menu items:*/
-* {
-    -fx-my-menu-color: #3a4559;
-    -fx-my-menu-color-highlighted: #616c87;
-    -fx-my-menu-font-color: white;
-    -fx-my-menu-font-color-highlighted: white;
-}
-
-
 .menu-bar {
-    -fx-background-color: -fx-my-menu-color;
+    -fx-background-color: -fx-my-background-color-color;
 }
 
 .menu-bar > .container > .menu-button {
-    -fx-background-color: -fx-my-menu-color;
+    -fx-background-color: -fx-my-background-color-color;
 }
 
 .menu-bar > .container > .menu-button > .label {
-    -fx-text-fill: -fx-my-menu-font-color;
+    -fx-text-fill: -fx-my-font-color;
 }
 
 .menu-bar > .container > .menu-button > .label:disabled {
@@ -149,21 +156,21 @@ Slider .thumb{
 .menu-bar > .container > .menu-button:hover,
 .menu-bar > .container > .menu-button:focused,
 .menu-bar > .container > .menu-button:showing {
-    -fx-background-color: -fx-my-menu-color-highlighted;
+    -fx-background-color: -fx-my-background-color-color-alt;
 }
 
 .menu-bar > .container > .menu-button:hover > .label,
 .menu-bar > .container > .menu-button:focused > .label,
 .menu-bar > .container > .menu-button:showing > .label {
-    -fx-text-fill: -fx-my-menu-font-color-highlighted;
+    -fx-text-fill: -fx-my-font-color-highlighted;
 }
 
 .menu-item {
-    -fx-background-color: -fx-my-menu-color;
+    -fx-background-color: -fx-my-background-color-color;
 }
 
 .menu-item .label {
-    -fx-text-fill: -fx-my-menu-font-color;
+    -fx-text-fill: -fx-my-font-color;
 }
 
 .menu-item .label:disabled {
@@ -171,14 +178,14 @@ Slider .thumb{
 }
 
 .menu-item:focused, .menu-item:hovered {
-    -fx-background-color: -fx-my-menu-color-highlighted;
+    -fx-background-color: -fx-my-background-color-color-alt;
 }
 
 .menu-item:focused .label, .menu-item:hovered .label {
-    -fx-text-fill: -fx-my-menu-font-color-highlighted;
+    -fx-text-fill: -fx-my-font-color-highlighted;
 }
 
 .context-menu {
-    -fx-background-color: -fx-my-menu-color;
+    -fx-background-color: -fx-my-background-color-color;
 }
 
