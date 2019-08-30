@@ -1,31 +1,169 @@
-*{
-    -fx-background-color: #c5d6d9;
+/*Theme base colors:*/
+* {
+    -fx-my-background-color-color: #c5d6d9;
+    -fx-my-background-color-color-alt: #9bbec4;
+    -fx-my-font-color: #394345;
+    -fx-my-font-color-highlighted: #394345;
+	-fx-my-default-element-color: #b2ccd1;
+	-fx-my-error-text-fill: #690f0f;
+}
+
+.container{
+    -fx-background-color: -fx-my-background-color-color;
+}
+.errorText{
+    -fx-text-fill: -fx-my-error-text-fill;
+    -fx-font-weight: bold;
+    -fx-font-size: 13pt;
 }
 
 .big{
    -fx-font-size: 16pt;
 }
-Button, Label, ChoiceBox, Slider {
-    -fx-text-fill: #394345;
+Button, Label, ChoiceBox, Slider, TextField, .menu-button{
+    -fx-text-fill: -fx-my-font-color;
 }
 Button {
-    -fx-background-color: #b2ccd1;
+    -fx-background-color: -fx-my-default-element-color;
 }
 Button:hover {
-    -fx-background-color: #9bbec4;
+    -fx-background-color: -fx-my-background-color-color-alt;
 }
-ChoiceBox > *{
-    -fx-background-color: #b2ccd1;
+ChoiceBox >* {
+    -fx-background-color: -fx-my-default-element-color;
 }
 Slider .axis {
-    -fx-tick-label-fill: white;
+    -fx-tick-label-fill: -fx-my-font-color;
 }
 Slider .track{
-    -fx-background-color: #b2ccd1;
+    -fx-background-color: -fx-my-default-element-color;
 }
 Slider .track:hover{
-    -fx-background-color: #9bbec4;
+    -fx-background-color: -fx-my-background-color-color-alt;
 }
 Slider .thumb{
-    -fx-background-color: #394345;
+    -fx-background-color: #85939e;
 }
+.text-field {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-text-box-border, -fx-control-inner-background;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 3, 2, 2;
+    -fx-padding: 0.25em 0.416667em  0.333333em 0.416667em; /* 3 5 4 5 */
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+    -fx-cursor: text;
+    -fx-control-inner-background: -fx-my-default-element-color ;
+}
+
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-text-box-border, -fx-control-inner-background;
+    -fx-background-insets: -0.4, 1, 2;
+    -fx-background-radius: 3.4, 2, 2;
+    -fx-prompt-text-fill: transparent;
+}
+/*Table view:*/
+.table-view{
+   -fx-background-color: -fx-my-background-color-color;
+}
+
+.table-view:focused{
+    -fx-background-color: -fx-my-background-color-color;
+}
+.table-view .column-header-background,
+.table-view .column-header-background .filler {
+    -fx-background-color: linear-gradient(#c5d6d9 0%, #a0b4b8 100%);
+}
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-my-font-color;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .table-cell{
+    -fx-text-fill: -fx-my-font-color;
+}
+.table-row-cell{
+    -fx-background-color: #a0b4b8;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-table-cell-border-color: #a2b0b3;
+    -fx-border-color: #a2b0b3;
+}
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #c5d6d9;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+.table-row-cell:selected {
+    -fx-background-color: #708b91;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+/*Tree view:*/
+.tree-cell{
+    -fx-background-color: -fx-my-background-color-color;
+    -fx-text-fill: -fx-my-font-color;
+ }
+.tree-cell > .tree-disclosure-node > .arrow  {
+     -fx-background-color: -fx-my-font-color;
+ }
+.tree-cell:expanded > .tree-disclosure-node > .arrow {
+     -fx-background-color: grey;
+ }
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button {
+     -fx-padding: 0.15em;
+
+ }
+.scroll-bar .thumb {
+     -fx-background-color: #708b91;
+ }
+.scroll-bar{
+      -fx-background-color: #c5d6d9;
+}
+
+/*menus and menu items:*/
+.menu-bar {
+    -fx-background-color: -fx-my-background-color-color;
+}
+
+.menu-bar > .container > .menu-button {
+    -fx-background-color: -fx-my-background-color-color;
+}
+
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: -fx-my-font-color;
+}
+
+.menu-bar > .container > .menu-button > .label:disabled {
+    -fx-opacity: 1.0;
+}
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: -fx-my-background-color-color-alt;
+}
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing > .label {
+    -fx-text-fill: -fx-my-font-color-highlighted;
+}
+.menu-item {
+    -fx-background-color: -fx-my-background-color-color;
+}
+.menu-item .label {
+    -fx-text-fill: -fx-my-font-color;
+}
+.menu-item .label:disabled {
+    -fx-opacity: 1.0;
+}
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: -fx-my-background-color-color-alt;
+}
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-text-fill: -fx-my-font-color-highlighted;
+}
+.context-menu {
+    -fx-background-color: -fx-my-background-color-color;
+}
+

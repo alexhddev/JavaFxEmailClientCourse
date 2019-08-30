@@ -4,14 +4,9 @@
     -fx-my-background-color-color-alt: #616c87;
     -fx-my-font-color: white;
     -fx-my-font-color-highlighted: white;
-
 	-fx-my-default-element-color: #353b4a;
 	-fx-my-error-text-fill: #690f0f;
 }
-
-
-
-
 
 .container{
     -fx-background-color: -fx-my-background-color-color;
@@ -40,7 +35,6 @@ ChoiceBox >* {
 Slider .axis {
     -fx-tick-label-fill: -fx-my-font-color;
 }
-
 Slider .track{
     -fx-background-color: -fx-my-default-element-color;
 }
@@ -57,7 +51,7 @@ Slider .thumb{
     -fx-padding: 0.25em 0.416667em  0.333333em 0.416667em; /* 3 5 4 5 */
     -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
     -fx-cursor: text;
-    -fx-control-inner-background: #383f4f ;
+    -fx-control-inner-background: -fx-my-default-element-color ;
 }
 
 .text-field:focused {
@@ -78,20 +72,16 @@ Slider .thumb{
 .table-view .column-header-background .filler {
     -fx-background-color: linear-gradient(#3f4b61 0%, #424141 100%);
 }
-
 .table-view .column-header-background .label{
     -fx-background-color: transparent;
     -fx-text-fill: -fx-my-font-color;
 }
-
 .table-view .column-header {
     -fx-background-color: transparent;
 }
-
 .table-view .table-cell{
     -fx-text-fill: -fx-my-font-color;
 }
-
 .table-row-cell{
     -fx-background-color: #495469;
     -fx-background-insets: 0, 0 0 1 0;
@@ -99,19 +89,16 @@ Slider .thumb{
     -fx-table-cell-border-color: #667591;
     -fx-border-color: #667591;
 }
-
 .table-row-cell:odd{
     -fx-background-color: -fx-table-cell-border-color, #3a4354;
     -fx-background-insets: 0, 0 0 1 0;
     -fx-padding: 0.0em; /* 0 */
 }
-
 .table-row-cell:selected {
     -fx-background-color: #005797;
     -fx-background-insets: 0;
     -fx-background-radius: 1;
 }
-
 /*Tree view:*/
 .tree-cell{
     -fx-background-color: #3f4b61;
@@ -123,7 +110,6 @@ Slider .thumb{
 .tree-cell:expanded > .tree-disclosure-node > .arrow {
      -fx-background-color: grey;
  }
-
 .scroll-bar > .increment-button,
 .scroll-bar > .decrement-button {
      -fx-padding: 0.15em;
@@ -152,39 +138,31 @@ Slider .thumb{
 .menu-bar > .container > .menu-button > .label:disabled {
     -fx-opacity: 1.0;
 }
-
 .menu-bar > .container > .menu-button:hover,
 .menu-bar > .container > .menu-button:focused,
 .menu-bar > .container > .menu-button:showing {
     -fx-background-color: -fx-my-background-color-color-alt;
 }
-
 .menu-bar > .container > .menu-button:hover > .label,
 .menu-bar > .container > .menu-button:focused > .label,
 .menu-bar > .container > .menu-button:showing > .label {
     -fx-text-fill: -fx-my-font-color-highlighted;
 }
-
 .menu-item {
     -fx-background-color: -fx-my-background-color-color;
 }
-
 .menu-item .label {
     -fx-text-fill: -fx-my-font-color;
 }
-
 .menu-item .label:disabled {
     -fx-opacity: 1.0;
 }
-
 .menu-item:focused, .menu-item:hovered {
     -fx-background-color: -fx-my-background-color-color-alt;
 }
-
 .menu-item:focused .label, .menu-item:hovered .label {
     -fx-text-fill: -fx-my-font-color-highlighted;
 }
-
 .context-menu {
     -fx-background-color: -fx-my-background-color-color;
 }
