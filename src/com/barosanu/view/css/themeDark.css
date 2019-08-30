@@ -78,9 +78,11 @@ Slider .thumb{
 }
 
 .table-row-cell{
-    -fx-background-color: -fx-table-cell-border-color, #495469;
+    -fx-background-color: #495469;
     -fx-background-insets: 0, 0 0 1 0;
     -fx-padding: 0.0em; /* 0 */
+    -fx-table-cell-border-color: #667591;
+    -fx-border-color: #667591;
 }
 
 .table-row-cell:odd{
@@ -118,4 +120,7 @@ Slider .thumb{
 .scroll-bar{
       -fx-background-color: #3a4354;
 }
+
+/*menus and menu items:*/
+
 
