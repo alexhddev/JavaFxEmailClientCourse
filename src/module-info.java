@@ -5,6 +5,7 @@ module JavaFxEmailClientCourse {
     requires javafx.web;
     requires activation;
     requires java.mail;
+    requires java.desktop;
 
     opens com.barosanu;
     opens com.barosanu.view;
